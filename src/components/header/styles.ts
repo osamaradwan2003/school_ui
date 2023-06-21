@@ -3,6 +3,8 @@ import React from "react";
 
 export const headerStyle: React.CSSProperties = {
     paddingLeft: "1rem",
+    position: "sticky",
+    top: 0
 }
 
 export const ButtonStyle: React.CSSProperties = {

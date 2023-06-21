@@ -1,17 +1,18 @@
 import {Divider, Layout, Menu, theme} from "antd";
 import {useSelector} from "react-redux";
-import {CollapseSelector,thmeSelector} from "../../store/store";
-import {sidebarLinks} from "../../routes/sidebarLinks";
+import {CollapseSelector,themeSelector} from "../../store/store";
+import {sidebarLinks} from "../../routes/sidebarLinks.tsx";
 import SidebarHeader from "./SideHeader.tsx";
 import {SidebarContainer}  from "./SidebarStyle.ts"
+import {SIDEBAR_COLLAPSED_WIDTH, SIDEBAR_FULL_WIDTH} from "../../utils/constans.ts";
 export default function Sidebar()  {
 	const isCollapsed = useSelector(CollapseSelector),
-		isDark = useSelector(thmeSelector);
+		isDark = useSelector(themeSelector);
 	const {
 		token: { colorBgContainer },
 	} = theme.useToken();
 	return (
-		<Layout.Sider  style={{...SidebarContainer, backgroundColor:colorBgContainer}}  width={240} collapsed={isCollapsed}>
+		<Layout.Sider style={{...SidebarContainer, backgroundColor:colorBgContainer}} collapsedWidth={SIDEBAR_COLLAPSED_WIDTH}  width={SIDEBAR_FULL_WIDTH} collapsed={isCollapsed}>
 			<SidebarHeader className="mb-1" />
 			<Divider />
 			<Menu
