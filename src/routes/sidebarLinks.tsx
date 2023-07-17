@@ -11,8 +11,15 @@ import {
     UsergroupAddOutlined,
     FileExclamationOutlined,
     ScheduleOutlined,
-    SettingFilled, BarcodeOutlined
+    SettingFilled,
+    ProfileOutlined
 } from "@ant-design/icons/lib/icons";
+import {FaCriticalRole, FaTable, FaUsers} from "react-icons/fa";
+import {AiOutlineCalendar, AiOutlineUsergroupAdd} from "react-icons/ai";
+import {RiParentFill} from "react-icons/ri";
+import {BsFillShieldFill} from "react-icons/bs";
+import {Link} from "react-router-dom";
+
 
 export  const sidebarLinks = [
     {
@@ -28,13 +35,20 @@ export  const sidebarLinks = [
         children: [
             {
                 key: 3,
-                label: "Add",
+                label: (
+                  <Link to="/students/add">Add</Link>
+                ),
                 icon: React.createElement(UserAddOutlined)
             },
             {
                 key: 29,
                 label: "Adherence",
-                icon: React.createElement(BarcodeOutlined)
+                icon: React.createElement(AiOutlineCalendar)
+            },
+            {
+                key: 332222,
+                label: "Daily Log",
+                icon: React.createElement(ProfileOutlined)
             },
             {
                 key: 4,
@@ -46,6 +60,29 @@ export  const sidebarLinks = [
                 label: "Reports",
                 icon: React.createElement(FileFilled)
             }
+        ]
+    },
+    {
+        key: 732673,
+        label: "Parents",
+        icon: React.createElement(RiParentFill),
+        title: "Parents",
+        children: [
+            {
+                key: 863664,
+                label: (
+                    <Link to="/parents/add">Add</Link>
+                ),
+                icon: React.createElement(UserAddOutlined)
+            },
+            {
+                key: 6646,
+                label: (
+                    <Link to="/parents/all">All</Link>
+                ),
+                icon: React.createElement(UserAddOutlined)
+            },
+
         ]
     },
     {
@@ -62,8 +99,9 @@ export  const sidebarLinks = [
             {
                 key: 24,
                 label: "Adherence",
-                icon: React.createElement(BarcodeOutlined)
+                icon: React.createElement(AiOutlineCalendar)
             },
+
             {
                 key: 8,
                 label: "Edit",
@@ -140,6 +178,47 @@ export  const sidebarLinks = [
             },
             {
                 key: 20,
+                label: "Reports",
+                icon: React.createElement(FileFilled)
+            }
+        ]
+    },
+    {
+        key: 44,
+        label: "Roles",
+        icon: React.createElement(BsFillShieldFill),
+        title: "Roles",
+        children: [
+            {
+                key: 74,
+                label: "Create",
+                icon: React.createElement(FaCriticalRole)
+            },
+            {
+                key: 923,
+                label: "All",
+                icon: React.createElement(FaTable)
+            },
+        ]
+    },
+    {
+        key: 322,
+        label: "Users",
+        icon: React.createElement(FaUsers),
+        title: "Users",
+        children: [
+            {
+                key: 3232,
+                label: "Create",
+                icon: React.createElement(AiOutlineUsergroupAdd)
+            },
+            {
+                key: 23319,
+                label: "All",
+                icon: React.createElement(FaTable)
+            },
+            {
+                key: 22230,
                 label: "Reports",
                 icon: React.createElement(FileFilled)
             }

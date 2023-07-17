@@ -2,7 +2,6 @@ import {CSSProperties} from "react"
 
 export const SidebarContainer: CSSProperties = {
     padding: 10,
-    overflow: 'auto',
     height: '100vh',
     position: 'fixed',
     left: 0,

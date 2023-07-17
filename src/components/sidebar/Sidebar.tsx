@@ -12,7 +12,7 @@ export default function Sidebar()  {
 		token: { colorBgContainer },
 	} = theme.useToken();
 	return (
-		<Layout.Sider style={{...SidebarContainer, backgroundColor:colorBgContainer}} collapsedWidth={SIDEBAR_COLLAPSED_WIDTH}  width={SIDEBAR_FULL_WIDTH} collapsed={isCollapsed}>
+		<Layout.Sider className="overflow-hidden hover:overflow-auto" style={{...SidebarContainer, backgroundColor:colorBgContainer}} collapsedWidth={SIDEBAR_COLLAPSED_WIDTH}  width={SIDEBAR_FULL_WIDTH} collapsed={isCollapsed}>
 			<SidebarHeader className="mb-1" />
 			<Divider />
 			<Menu

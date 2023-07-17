@@ -9,5 +9,5 @@ interface RequireAuthProps{
 export function RequireAuth({children}: RequireAuthProps) {
 	const isLogin = useSelector(isAuthSelector);
 	if(isLogin) return children
-	return  <Navigate to="/auth/login" />
+	return  <Navigate to="/auth/login" replace={true}/>
 }

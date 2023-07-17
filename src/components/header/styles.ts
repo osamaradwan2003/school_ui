@@ -4,7 +4,8 @@ import React from "react";
 export const headerStyle: React.CSSProperties = {
     paddingLeft: "1rem",
     position: "sticky",
-    top: 0
+    top: 0,
+    zIndex: 9999
 }
 
 export const ButtonStyle: React.CSSProperties = {

@@ -1,3 +1,4 @@
+import {Schema} from "yup";
 
 export  function getCookie(key: string) {
   const name:string = key + "=",
@@ -91,3 +92,8 @@ export const hexToHSL = (hex: string): { h: number; s: number; l: number } => {
   }
 };
 
+export const yupValidator =(schema: Schema)=>( {
+  async validator(_: object, value:string) {
+    await schema.validateSync( value );
+  },
+});

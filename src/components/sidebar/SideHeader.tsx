@@ -10,7 +10,7 @@ import {HTMLProps} from "react";
 export  default function SidebarHeader(props: HTMLProps<HTMLDivElement>): JSX.Element{
          const isCollapsed = useSelector(CollapseSelector),
              isDark = useSelector(themeSelector),
-             ImageLogo = isDark ? "./assets/dark_logo.png" : "./assets/light_logo.png";
+             ImageLogo = isDark ? "/assets/dark_logo.png" : "/assets/light_logo.png";
         return (
             <div {...props}>
                 <Row justify={"center"} style={SidebarHeaderStyle}>

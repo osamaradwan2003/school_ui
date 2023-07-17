@@ -1,10 +1,10 @@
 import React from "react";
 import { Field, FieldProps, FastField, FastFieldProps } from "formik";
-import { Form, Input as AntdInput } from "antd";
+import { Form } from "antd";
 import { FormItemProps } from "antd/lib/form";
 import { InputProps } from "antd/lib/input";
 
-type Props = InputProps & {
+type Props = (InputProps) & {
   name: string;
   fast?: boolean;
   FormItemProps?: FormItemProps;
@@ -19,36 +19,23 @@ export const FormikInput: React.FC<Props> = ({
                                              }) => {
   const FieldComponent = fast ? FastField : Field;
 
-  return (
+    return (
     <FieldComponent name={name}>
       {({ field, meta, form }: FieldProps | FastFieldProps) => (
+
         <Form.Item
           name={name}
           validateStatus={meta.touched && meta.error ? "error" : "success"}
           help={meta.touched && meta.error}
           {...FormItemProps}
         >
-          {rest.type == "password" ?
-            <AntdInput.Password
-              {...field}
-              {...rest}
-              onChange={(e) => {
-                onChange?.(e); // onChange passed into the field
-                field.onChange(e);
-                if (!meta.touched) form.setFieldTouched(name, true);
-              }}
-            />
-            :
-            <AntdInput
-              {...field}
-              {...rest}
-              onChange={(e) => {
-                onChange?.(e); // onChange passed into the field
-                field.onChange(e);
-                if (!meta.touched) form.setFieldTouched(name, true);
-              }}
-            />
-          }
+            <FormikAnt field={field}
+                       meta={meta}
+                       onChange={onChange}
+                       Form={form} {...rest}
+                       name={name}
+            >
+            </FormikAnt>
         </Form.Item>
       )}
     </FieldComponent>
