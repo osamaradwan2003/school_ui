@@ -4,6 +4,8 @@ import {MainLayout} from "../layout/MainLayout.tsx";
 import {Login} from "../pages/auth/Login.tsx";
 import {AuthLayout} from "../layout/AuthLayout.tsx";
 import {CreateStudent} from "../pages/student/CreateStudent.tsx";
+import AddParent from "../pages/parent/AddParent.tsx";
+
 
 
 export  const AppRouters: RouteObject[] = [
@@ -27,7 +29,7 @@ export  const AppRouters: RouteObject[] = [
                 children:[
                     {
                         path: "add",
-
+                        Component: AddParent,
                     },
                     {
                         path: "all"

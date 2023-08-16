@@ -23,3 +23,8 @@ body, #root{
     background-color: transparent;
 }
 
+.ant-form-item-control-input-content{
+    display: flex;
+    gap:1em;
+    align-items: center;
+}
