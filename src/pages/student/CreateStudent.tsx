@@ -1,6 +1,6 @@
 import CreateForm from "../../components/Form/CreateForm.tsx";
 import { Typography} from "antd";
-import {StudentSchema} from "../../../formsSchema/studentSchema.tsx";
+import {StudentSchema} from "../../formsSchema/studentSchema.tsx";
 
 
 

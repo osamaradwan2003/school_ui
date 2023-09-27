@@ -18,6 +18,7 @@ import {FaCriticalRole, FaTable, FaUsers} from "react-icons/fa";
 import {AiOutlineCalendar, AiOutlineUsergroupAdd} from "react-icons/ai";
 import {RiParentFill} from "react-icons/ri";
 import {BsFillShieldFill} from "react-icons/bs";
+import {FcBusiness} from "react-icons/fc"
 import {Link} from "react-router-dom";
 
 
@@ -87,13 +88,13 @@ export  const sidebarLinks = [
     },
     {
         key: 6,
-        label: "Teachers",
-        icon: React.createElement(GroupOutlined),
-        title: "Teachers",
+        label: "Employees",
+        icon: React.createElement(FcBusiness),
+        title: "Employees",
         children: [
             {
                 key: 7,
-                label: "Add",
+                label: <Link to="/emp">Add</Link>,
                 icon: React.createElement(UserAddOutlined)
             },
             {

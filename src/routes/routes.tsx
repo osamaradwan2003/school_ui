@@ -35,6 +35,13 @@ export  const AppRouters: RouteObject[] = [
                         path: "all"
                     }
                 ]
+            },
+            {
+                path: "emp",
+                element: (
+                    <h1>Add Emp</h1>
+                ),
+            
             }
         ]
 

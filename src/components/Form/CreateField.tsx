@@ -41,6 +41,13 @@ export  default function CreateField(field: FormSchema){
 				{ (field?.fieldProps?.children as ReactNode) }
 			</Form.Item>
 		)
+	
+	}else if(field.type == "field"){
+			return (
+				<Form.Item  name={field.name} {...field.fieldProps}  {...(field.rules && {rules: [yupValidator(field.rules)]})} >
+					{ (field?.fieldProps?.children as ReactNode) }
+				</Form.Item>
+		)
 	}
 	return (
 		<Form.Item  name={field.name} {...field.fieldProps}  {...(field.rules && {rules: [yupValidator(field.rules)]})} >

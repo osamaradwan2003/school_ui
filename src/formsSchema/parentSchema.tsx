@@ -1,7 +1,7 @@
-import {FormSchema} from "../src/@types";
+import { FormSchema } from "../@types";
 
 
-export const ParentSchema: FormSchema[] = [
+export const ParentFormSchema: FormSchema[] = [
   {
     name: "p_name",
     type: "text",
