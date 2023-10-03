@@ -5,6 +5,7 @@ import {Login} from "../pages/auth/Login.tsx";
 import {AuthLayout} from "../layout/AuthLayout.tsx";
 import {CreateStudent} from "../pages/student/CreateStudent.tsx";
 import AddParent from "../pages/parent/AddParent.tsx";
+import AddEmployee from "../pages/employee/AddEmployee.tsx";
 
 
 
@@ -38,10 +39,7 @@ export  const AppRouters: RouteObject[] = [
             },
             {
                 path: "emp",
-                element: (
-                    <h1>Add Emp</h1>
-                ),
-            
+                element: <AddEmployee />
             }
         ]
 

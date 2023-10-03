@@ -6,7 +6,7 @@ export  default  function AddParent() {
 	return (
 		<>
 			<Typography.Title>Add Parent</Typography.Title>
-			<CreateForm formSchema={ParentFormSchema}/>
+			<CreateForm className="grid grid-cols-2 gap-4" formSchema={ParentFormSchema}/>
 		</>
 	)
 }
