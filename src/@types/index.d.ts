@@ -7,6 +7,8 @@ import {
   SelectProps,
   ButtonProps,
 } from "antd";
+import { NonIndexRouteObject, RouteObject } from "react-router-dom";
+import { MenuItemType } from "antd/es/menu/hooks/useItems";
 
 /*
  *FormSchema Data type for Create Form Component
@@ -32,3 +34,10 @@ declare type FormSchema = {
   selectProps?: SelectProps;
   buttonProps?: ButtonProps;
 };
+
+interface HyperRoute<
+  Parm extends MenuItemType & RouteObject = MenuItemType & RouteObject
+> extends NonIndexRouteObject,
+    MenuItemType {
+  children?: Parm[];
+}

@@ -11,9 +11,9 @@ export default function Header() {
 		token: { colorBgContainer },
 	} = theme.useToken();
 	return (
-		<AHeader  className="flex justify-between " style={{...headerStyle, backgroundColor: colorBgContainer}}>
+		<AHeader style={{...headerStyle, backgroundColor: colorBgContainer}}>
 			<HeaderLeft />
-			<HeaderRight className="flex items-center gap-3"/>
+			<HeaderRight/>
 		</AHeader>
 	)
 }

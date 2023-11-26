@@ -1,20 +1,22 @@
-import {RouteObject} from "react-router-dom";
 import {MainLayout} from "../layout/MainLayout.tsx";
-// import {RequireAuth} from "../layout/RequireAuth.tsx";
+import {RequireAuth} from "../layout/RequireAuth.tsx";
 import {Login} from "../pages/auth/Login.tsx";
 import {AuthLayout} from "../layout/AuthLayout.tsx";
 import {CreateStudent} from "../pages/student/CreateStudent.tsx";
 import AddParent from "../pages/parent/AddParent.tsx";
 import AddEmployee from "../pages/employee/AddEmployee.tsx";
-
+import { RouteObject } from "react-router-dom";
+// import { MenuProps } from "antd";
 
 
 export  const AppRouters: RouteObject[] = [
     {
         path: "/",
         element: (
-            <MainLayout/>
-        ),
+                <RequireAuth>
+                    <MainLayout/>
+                </RequireAuth>
+            ),
         children: [
             {
                 path: "students",
@@ -42,7 +44,6 @@ export  const AppRouters: RouteObject[] = [
                 element: <AddEmployee />
             }
         ]
-
     },
     {
         path: "auth",
@@ -56,3 +57,10 @@ export  const AppRouters: RouteObject[] = [
         ]
     }
 ]
+
+// function createRouteLinks(routes: RouteObject[]): MenuProps['items']{
+//     let links:MenuProps['items'] = []
+
+//     return links;
+// }
+export default AppRouters;

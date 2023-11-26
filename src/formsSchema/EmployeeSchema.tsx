@@ -34,6 +34,6 @@ export const EmployeeSchema: FormSchema[] = [
   {
     name: "submit",
     type: "button",
-    buttonProps: {children: "Add Employee"}
+    buttonProps: {children: "Add Employee", type: "primary", block:true}
   }
 ];

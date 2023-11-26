@@ -102,10 +102,12 @@ export const StudentSchema: FormSchema[] = [
   {
     type: "button",
     name: "submit",
-    fieldProps: {className: "flex justify-end"},
+    fieldProps: {className: "flex justify-center"},
     buttonProps: {
       children: "Create Student",
       htmlType: "submit",
+      type:"primary",
+      block: true
     }
   }
 ]

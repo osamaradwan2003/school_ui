@@ -22,7 +22,7 @@ import {FcBusiness} from "react-icons/fc"
 import {Link} from "react-router-dom";
 
 
-export  const sidebarLinks = [
+const sidebarLinks = [
     {
         key: 1,
         label: "Home",
@@ -231,3 +231,5 @@ export  const sidebarLinks = [
         icon: React.createElement(SettingFilled),
     },
 ]
+
+export default sidebarLinks;
